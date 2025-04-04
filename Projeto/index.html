@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Currículo - Seu Nome</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+    
     <style>
         body {
             font-family: 'Poppins', sans-serif;
@@ -31,7 +33,7 @@
             border: 2px solid rgba(255, 255, 255, 0.5);
         }
         h1, h2 {
-            color: #333;
+            color: #181818;
             text-align: center;
         }
         .foto-perfil {
@@ -41,6 +43,35 @@
             object-fit: cover;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
             margin-bottom: 15px;
+        
+        }
+        .c-links {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr); /* Cria duas colunas iguais */
+            gap: 10px;
+            justify-content: center; 
+            margin-top: 10px; 
+        }
+        .c-links a img {
+            width: 120px;
+            height: 120px;
+            transition: transform 0.3s;
+        }
+        .c-links a img:hover {
+            transform: scale(1.1);
+        }
+        .social-links {
+            display: flex;
+            gap: 15px;
+            margin-top: 10px;
+        }
+        .social-links a img {
+            width: 40px;
+            height: 40px;
+            transition: transform 0.3s;
+        }
+        .social-links a img:hover {
+            transform: scale(1.1);
         }
         .tabs {
             display: flex;
@@ -97,14 +128,28 @@
         <h1>Seu Nome</h1>
         <p>Email: seuemail@email.com | Telefone: (XX) XXXXX-XXXX</p>
         <p>Endereço: Sua Cidade - Seu Estado</p>
+
+        <div class="social-links">
+            <a href="https://www.linkedin.com" target="_blank">
+                <img src="linkedin.png" alt="LinkedIn">
+            </a>
+            <a href="https://github.com" target="_blank">
+                <img src="git.png" alt="GitHub">
+            </a>
+            <a href="https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&cad=rja&uact=8&ved=2ahUKEwiJpZb7i72MAxW7q5UCHX2bPPsQFnoECAwQAQ&url=https%3A%2F%2Fwww.whatsapp.com%2F%3Flang%3Dpt_BR&usg=AOvVaw0C5ofZ3s_hpdWdMPbURSoM&opi=89978449" target="_blank">
+                <img src="wtt.png" alt="GitHub">
+            </a>
+        </div>  
         
         <div class="tabs">
             <button class="tab-button active" onclick="openTab(event, 'sobre')">Sobre Mim</button>
             <button class="tab-button" onclick="openTab(event, 'experiencia')">Experiência</button>
             <button class="tab-button" onclick="openTab(event, 'educacao')">Educação</button>
             <button class="tab-button" onclick="openTab(event, 'habilidades')">Habilidades</button>
+            <button class="tab-button" onclick="openTab(event, 'certificados')">Certificados</button>
+
         </div>
-        
+
         <div id="sobre" class="tab-content active">
             <h2>Sobre Mim</h2>
             <p>Breve descrição sobre você, suas habilidades e objetivos profissionais.</p>
@@ -133,6 +178,32 @@
                 <li>Habilidade 3</li>
             </ul>
         </div>
+
+        <div id="certificados" class="tab-content">
+
+            <h2>Certificados</h2>
+
+            <div class="c-links">
+                <a href="https://www.uniritter.edu.br" target="_blank">
+                    <img src="uni.png" alt="LinkedIn">
+                </a>
+                <a href="https://www.uniritter.edu.br" target="_blank">
+                    <img src="uni.png" alt="GitHub">
+                </a>
+                <a href="https://www.uniritter.edu.br" target="_blank">
+                    <img src="uni.png" alt="GitHub">
+                </a>
+                <a href="https://www.uniritter.edu.br" target="_blank">
+                    <img src="uni.png" alt="GitHub">
+                </a>
+                <a href="https://www.uniritter.edu.br" target="_blank">
+                    <img src="uni.png" alt="GitHub">
+                </a>
+                <a href="https://www.uniritter.edu.br" target="_blank">
+                    <img src="uni.png" alt="GitHub">
+                </a>
+        </div>
+
     </div>
 </body>
 </html>
